@@ -81,3 +81,6 @@ def redefinir_missao(lista):
             opcao_redefinir = input("Escolha um dos dados para redefinir: ")
             if opcao_redefinir == '1':
      
+  
+print("teste");
+print("teste");
