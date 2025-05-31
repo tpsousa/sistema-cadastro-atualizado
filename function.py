@@ -58,4 +58,4 @@ def simularLancamento(list):
       print("invalid option");
 
   
-     
+print("teste");
