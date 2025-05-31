@@ -59,3 +59,4 @@ def simularLancamento(list):
 
   
 print("teste");
+print("teste");
