@@ -56,6 +56,28 @@ def simularLancamento(list):
         print("mission failed");
   else:
       print("invalid option");
+      
+      
+def redefinir_missao(lista):
+    print("\nRedefinir qual missão?");
+    if len(lista) == 0:
+        print("Nenhuma missão foi cadastrada");
+        return
+    
+    #percorer a lista de missoes cadastradas
+    for indice, missao in enumerate(lista):
+        print(f"{indice+1} - {missao ['Nave']} (Destino: {missao ['Destino']})");
+    #escolhemos a missao que queremos redefinir
+    escolha_redefinir = int(input("Escolha a missão:")) - 1
 
-  
+    if 0 <= escolha_redefinir < len(lista):
+        missao = lista[escolha_redefinir]
+        while True: #Escolhermos qual(is) dado(s) queremos redefinir
+            print(f"1.Nave: {missao['Nave']}");
+            print(f"2.Destino: {missao['Destino']}");
+            print(f"3.Tripulantes: {missao['Tripulantes']}");
+            print(f"4.Combustivel: {missao['Combustivel Disponivel']:}L");
+            print(f"5.Duração: {missao['Duração da missão']} dias")
+            opcao_redefinir = input("Escolha um dos dados para redefinir: ")
+            if opcao_redefinir == '1':
      
