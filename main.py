@@ -1,38 +1,32 @@
 from function import *
-#funcao de criar menu
 
-missao = [];
+# Lista que armazena as missões
+missoes = []
 
+# Menu principal
 def menu():
     while True:
-        print("seja bem vindo a pagina de cadastro");
-        print("1.cadastrar missao");
-        print("2.listar missoes");
-        print("3.simular lancamento");
-        print("4.sair")
+        print("\n=== MENU DE MISSÕES ESPACIAIS ===")
+        print("1 - Cadastrar missão")
+        print("2 - Listar missões")
+        print("3 - Redefinir missão")
+        print("4 - Simular lançamento")
+        print("5 - Sair")
 
-        opcao = input("digite sua opcao escolhida: ");
-        
+        opcao = input("Escolha uma opção: ")
+
         if opcao == '1':
-         cadastrarMissao(missao);
-       
+            cadastrar_missao(missoes)
         elif opcao == '2':
-         listarMissoes(missao);
-      
-        elif opcao =='3':
-          simularLancamento(missao);
-          
+            listar_missoes(missoes)
+        elif opcao == '3':
+            redefinir_missao(missoes)
         elif opcao == '4':
-           print("saindo...")
-           break;
-           
+            simular_lancamento(missoes)
+        elif opcao == '5':
+            print("Saindo do sistema...")
+            break
         else:
-           print("opcao invalida");
+            print("Opção inválida.")
 
-menu();
-        
-        
-
-        
-
-    
+menu()
